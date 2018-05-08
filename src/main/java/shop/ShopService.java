@@ -10,13 +10,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.sun.jdi.connect.Connector.SelectedArgument;
-
 import org.apache.log4j.BasicConfigurator;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
-import shop.model.Product;
+import shop.model.Album;
+import shop.model.Titel;
 
 import java.io.FileInputStream;
 import java.net.URI;
@@ -27,7 +26,8 @@ import java.util.Map;
 
 public class ShopService {
 
-    public static Map<String, Product> products = new HashMap<>();
+    public static Map<Long, Titel> titels = new HashMap<>();
+    public static Map<Long, Album> alben = new HashMap<>();
     public static DatabaseReference productsRef;
 
     public static void main(String[] args) throws Exception {
@@ -49,20 +49,42 @@ public class ShopService {
         productsRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot data, String prevChildKey) {
-                Product product = data.getValue(Product.class);
-                products.put(product.id, product);
+            	try {
+            		Titel t = data.getValue(Titel.class);
+            		titels.put(t.titelId, t);
+            		System.out.println("TITEL addded");
+            	} catch(Exception e) {
+            		Album a = data.getValue(Album.class);
+            		alben.put(a.albumId, a);
+            		System.out.println("ALBUM added");
+            	}
             }
 
             @Override
             public void onChildChanged(DataSnapshot data, String prevChildKey) {
-                Product product = data.getValue(Product.class);
-                products.put(product.id, product);
+            	try {
+            		Titel t = data.getValue(Titel.class);
+            		titels.put(t.titelId, t);
+            		System.out.println("TITEL changed");
+            	} catch(Exception e) {
+            		Album a = data.getValue(Album.class);
+            		alben.put(a.albumId, a);
+            		System.out.println("ALBUM changed");
+            	}
             }
 
             @Override
             public void onChildRemoved(DataSnapshot data) {
-                Product product = data.getValue(Product.class);
-                products.remove(product.id);
+            	try {
+            		Titel t = data.getValue(Titel.class);
+                    titels.remove(t.titelId);
+                    System.out.println("TITEL removed");
+            	} catch(Exception e) {
+            		Album a = data.getValue(Album.class);
+                    alben.remove(a.albumId);
+                    System.out.println("ALBUM removed");
+            	}
+                
             }
 
             @Override
