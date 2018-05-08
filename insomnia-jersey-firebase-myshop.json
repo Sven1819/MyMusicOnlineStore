@@ -1,0 +1,219 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-01-12T19:51:58.014Z",
+	"__export_source": "insomnia.desktop.app:v5.12.4",
+	"resources": [
+		{
+			"_id": "wrk_2d18117812a84b19992d05e725564241",
+			"created": 1477575776278,
+			"description": "",
+			"modified": 1509638744878,
+			"name": "Insomnia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_3d79fbab79c24ba795bc3ae8ba3b7b9f",
+			"color": null,
+			"created": 1477575848674,
+			"data": {},
+			"isPrivate": false,
+			"modified": 1506406500052,
+			"name": "Base Environment",
+			"parentId": "wrk_2d18117812a84b19992d05e725564241",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_8a00f3f84b2a45b4aa93d0298115c360",
+			"cookies": [
+				{
+					"creation": "2017-11-05T09:58:17.041Z",
+					"domain": "www.fupa.net",
+					"hostOnly": true,
+					"id": "6837041800914352",
+					"key": "PHPSESSID",
+					"lastAccessed": "2017-11-05T09:58:17.041Z",
+					"path": "/",
+					"value": "2i2b0910d8g7idictetmgpvbjsuoa7thajbom0an42g622hcg3gk5h29tj8pp8823hku3hnhq95pbanh6qr1lhsau42jpoo6p3hunv3"
+				}
+			],
+			"created": 1477575848719,
+			"modified": 1509875897043,
+			"name": "Default Jar",
+			"parentId": "wrk_2d18117812a84b19992d05e725564241",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_9d9f372dbb104ea6a63f86a923e511bc",
+			"created": 1477575834830,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1506406499957,
+			"modified": 1506406499957,
+			"name": "MyShop",
+			"parentId": "wrk_2d18117812a84b19992d05e725564241",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_1454508867357",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1477575834848,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b3db2cc1f9ae40caa3b1a4cbb5916d7d",
+					"name": "Accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_1d848803d2604c7ab4c27e7bfa012094",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1506406499848,
+			"method": "GET",
+			"modified": 1515786546920,
+			"name": "Get products",
+			"parameters": [],
+			"parentId": "fld_9d9f372dbb104ea6a63f86a923e511bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/products/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1459928005796",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"title\": \"Product A\",\n    \"description\": \"My lovely product\",\n    \"currentPrice\": 100\n}"
+			},
+			"created": 1477575834849,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b993fb1206d84a2896169075b7bdcf15",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_94e683e5837b46d59d93a72548ca9758",
+					"name": "Accept",
+					"value": "application/xml"
+				}
+			],
+			"metaSortKey": -1506406499845.75,
+			"method": "POST",
+			"modified": 1515769325227,
+			"name": "Post product (JSON)",
+			"parameters": [],
+			"parentId": "fld_9d9f372dbb104ea6a63f86a923e511bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/products",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1465225020072",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1477575834849,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_79cddd0c5b9d409288ece729afae88ff",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1506406499831,
+			"method": "DELETE",
+			"modified": 1515786638982,
+			"name": "Delete product",
+			"parameters": [],
+			"parentId": "fld_9d9f372dbb104ea6a63f86a923e511bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/products/-L2fv3d_D0cND3Z9T_qm",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1465225226695",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n    \"title\": \"Changed B\",\n    \"description\": \"Hello World!\",\n    \"currentPrice\": 400\n}"
+			},
+			"created": 1477575834849,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_1ab9af15ac8e4001a03391707ccdc97d",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1506406499833,
+			"method": "PUT",
+			"modified": 1515786678612,
+			"name": "Put product",
+			"parameters": [],
+			"parentId": "fld_9d9f372dbb104ea6a63f86a923e511bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/products/-L2furLLsFZ_WgWzBEoJ",
+			"_type": "request"
+		},
+		{
+			"_id": "req_60c52014199f44bdbb43a9a3edf2f5db",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "<product>\n\t<title>Product B</title>\n\t<description>Another very exciting product</description>\n\t<currentPrice>200</currentPrice>\n</product>"
+			},
+			"created": 1515766848606,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b993fb1206d84a2896169075b7bdcf15",
+					"name": "Content-Type",
+					"value": "application/xml"
+				},
+				{
+					"id": "pair_94e683e5837b46d59d93a72548ca9758",
+					"name": "Accept",
+					"value": "application/json"
+				}
+			],
+			"metaSortKey": -1506406499843.5,
+			"method": "POST",
+			"modified": 1515769329161,
+			"name": "Post product (XML)",
+			"parameters": [],
+			"parentId": "fld_9d9f372dbb104ea6a63f86a923e511bc",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:8080/products",
+			"_type": "request"
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+"type": "service_account",
+"client_id":"979860005803-8352tbiui46f0n5gf8sle7c1d9cgm48b.apps.googleusercontent.com",
+"project_id":"mymusiconlinestore","auth_uri":"https://accounts.google.com/o/oauth2/auth",
+"token_uri":"https://accounts.google.com/o/oauth2/token",
+"auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+"client_secret":"6_a2DIuL8ttdVaHnAHkmeSxk",
+"redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mymusiconlinestore",
+  "private_key_id": "d3cce5be0da42dcdb26cd50916feee17d842f1d8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCEYHA9upmythqs\nwF8xsennM8kg9CTbZkFBrRqwKpArqrHelsXXefE5gMKIot/qqGxftPM/sNLKK60F\nuaTcGkv9S/xwavLa72unq4amnZdwVk5ugssZktsTuObkAvh+0wX/k4PjKnhhcyfT\nDBFeiv9Gn9ikM1AlV3S+HaicPw+jXt0srOWqljkPCYV+QJ5lh8h9FWnvWCS32X8J\n4j23LkkmuDpYMGKuiL1aB9rLcFf8Mf40JuyYjxDmcGAC9+W/i+up2drbEQMvI1eN\ncU92+PDCPfC6NLAvc4sJYIHNH/3xmTqiSArRo9XMOSra5/8KRAr7JMlh034pJ5yV\nqP8hhfFDAgMBAAECggEACOGjhjC30SqwnXiGqoHiTJXH38MhmerBZBOmH72rUJKy\nPlnlSjCvQ4llA9/RoB/OrZkpXNOTQOcvQ5wR+IZ3JLZtaGl0g8XedjBm51TZbTsN\nJhL2Z2/X7PnR2+hrHa8wztXp2lrmGrusJ1e+7pXqzKU61sFuliLI/VxmDJ2agf5p\nqmlXVJDI9MVjIvWDWTf0jHHMzRutT/QbIqytbTqc1yvMzz3LU4BotNi9CEf/MCUs\ncpKn2fFmDbIvFkbgsCATJwJ010dBVjpv7H0nn6uH9brApz9uPFO0L2wFs9ae0b+e\nGRghTpDZBDv2lIvDiJc7DuZ5a41Elh1mUQ+OG4WWwQKBgQC56HjgzQ0tpL4iOXV5\nRv5eD5E6Q1TOFeUi2KKnrsUTrV2sY83NmtBhLoiIOuGbvnAv4bkog4egL5NBF0Jc\ntrjMM45hYSbBKozQKd5z44QXa3YSckfiZ//ajYKAGOlUIpmttzLTa5yCnuCzVZ8V\nkzsMH2fgsHcHsKJzyixkh5au4QKBgQC2STW48y/giCRifd77Cm7Diqo/sC1ZkLJU\n7W5j6NpFYY/i9KQbUZEbS9e1tvtoVfTGAtV98tamnzZFQwsfeouNcAeY0JnvQcq+\npT4yc+Qwp/VRJuiVb07dEv+I9e1EEvm8vCSfKsAHIpNl2ZHM+Vk+xyecPxcrzvrb\nrsp+l5+YowKBgEZKUmHUxbXLQyRXi0YWhJh11FguGwNsnd0mAaHa36LH+tHyTl79\nuOn1mSPA94pWX76K3uIlkQMM2eVTcQDzCT4UBDJndCq29tTB79zrWgcs11C0Kt+8\nqK0usffS822fQ3G+AZaUanGstpK3vdV/fGTh/vmiXu7mZxXWjCBab6uhAoGBALUZ\n4RTiD0P9HmD3+wvgnpEJeAGUcEnWt0YnKhB67DgYKNLsCQrXK9o5rJLtu7M6Ctib\nQi5CkD20Wj/PzwI0Rud7USDixrzs2Zg1JakMeL5acCBzDopArtJ3KIeTBWonjBSV\nu7Ci0WuFT3nWAcPqS19Sj6jtCYFNvu95JddFnpsPAoGBAI7JZ2RGEsoQkGSpB+fk\nbPOOUypFGfGmllEeUVJclJXZKTBiv5vsr5s8OpCVoh4QD43reLlbDOfWuP9cIBZ0\nORS5Cij7lXvmEmjL5FBGt6Kh7+ux90FzC/3XDbCSGd88M3z8PTa/6FYdmAtnRQ5X\n6UCqaaMsuVjU3CKFceJ5+qzA\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-o98qm@mymusiconlinestore.iam.gserviceaccount.com",
+  "client_id": "117742991505275084437",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-o98qm%40mymusiconlinestore.iam.gserviceaccount.com"
+}
