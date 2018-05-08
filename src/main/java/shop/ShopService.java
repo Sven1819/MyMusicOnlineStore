@@ -26,9 +26,11 @@ import java.util.Map;
 
 public class ShopService {
 
-    public static Map<Long, Titel> titels = new HashMap<>();
-    public static Map<Long, Album> alben = new HashMap<>();
-    public static DatabaseReference productsRef;
+    public static Map<String, Titel> titels = new HashMap<>();
+    public static Map<String, Album> alben = new HashMap<>();
+    
+    public static DatabaseReference albenRef;
+    public static DatabaseReference titelsRef;
 
     public static void main(String[] args) throws Exception {
     	
@@ -43,47 +45,59 @@ public class ShopService {
     			.setDatabaseUrl("http://mymusiconlinestore.firebaseio.com/").build();
 
     	FirebaseApp.initializeApp(options);
-        productsRef = FirebaseDatabase.getInstance().getReference("products");
+    	albenRef = FirebaseDatabase.getInstance().getReference("alben");
+    	titelsRef = FirebaseDatabase.getInstance().getReference("titels");
+
 
         // Register change listener on database
-        productsRef.addChildEventListener(new ChildEventListener() {
+    	albenRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot data, String prevChildKey) {
-            	try {
-            		Titel t = data.getValue(Titel.class);
-            		titels.put(t.titelId, t);
-            		System.out.println("TITEL addded");
-            	} catch(Exception e) {
             		Album a = data.getValue(Album.class);
             		alben.put(a.albumId, a);
             		System.out.println("ALBUM added");
-            	}
             }
 
             @Override
             public void onChildChanged(DataSnapshot data, String prevChildKey) {
-            	try {
-            		Titel t = data.getValue(Titel.class);
-            		titels.put(t.titelId, t);
-            		System.out.println("TITEL changed");
-            	} catch(Exception e) {
             		Album a = data.getValue(Album.class);
             		alben.put(a.albumId, a);
             		System.out.println("ALBUM changed");
-            	}
             }
 
             @Override
             public void onChildRemoved(DataSnapshot data) {
-            	try {
-            		Titel t = data.getValue(Titel.class);
-                    titels.remove(t.titelId);
-                    System.out.println("TITEL removed");
-            	} catch(Exception e) {
             		Album a = data.getValue(Album.class);
                     alben.remove(a.albumId);
                     System.out.println("ALBUM removed");
-            	}
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot data, String prevChildKey) {}
+
+            @Override
+            public void onCancelled(DatabaseError error) {}
+        });
+        titelsRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot data, String prevChildKey) {
+            		Titel t = data.getValue(Titel.class);
+            		titels.put(t.titelId, t);
+            		System.out.println("TITEL addded");
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot data, String prevChildKey) {
+
+            		Titel t = data.getValue(Titel.class);
+            		titels.put(t.titelId, t);
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot data) {
+            		Titel t = data.getValue(Titel.class);
+                    titels.remove(t.titelId);
+                    System.out.println("TITEL removed");
                 
             }
 

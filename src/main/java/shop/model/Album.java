@@ -5,21 +5,21 @@ import java.util.List;
 
 public class Album {
 
-	public long albumId;
+	public String albumId;
 	
 	public String name;
 	
 	public String datum;
 	
-	public URI cover;
+	public String cover;
 	
-	public URI pfad;
+	public String pfad;
 	
 	public double preis;
 	
-	public List<Long> kuenstlerId;
+	public List<String> kuenstlerId;
 	
-	public List<Long> titelId;
+	public List<String> titelId;
 	
 	public List<Bewertung> bewertungen;
 	

@@ -6,21 +6,21 @@ import java.util.List;
 
 public class Titel {
 
-	public long titelId;
+	public String titelId;
 	
 	public String name;
 	
 	public double preis;
 	
-	public URI pfad;
+	public String pfad;
 	
-	public Duration laenge;
+	public String laenge;
 	
-	public Genre genre;
+	public String genre;
 	
-	public List<Long> kuenstlerId;
+	public List<String> kuenstlerId;
 	
-	public List<Long> albumId;
+	public List<String> albumId;
 	
 	public List<Bewertung> bewertungen;
 }
